@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/faizan-glitch/url-sh/cmd/cli/commands"
+	"github.com/faizan-glitch/url-sh/pkg/commands"
 	"github.com/faizan-glitch/url-sh/pkg/config"
 	"github.com/faizan-glitch/url-sh/pkg/database"
 	"github.com/spf13/cobra"

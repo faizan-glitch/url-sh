@@ -8,10 +8,10 @@ import (
 )
 
 type UrlSchema struct {
-	LongUrl   string `json:"long_url" bson:"long_url" redis:"long_url"`
-	ShortUrl  string `json:"short_url" bson:"short_url" redis:"short_url"`
-	ShortCode string `json:"short_code" bson:"short_code" redis:"short_code"`
-	Password  string `json:"password" bson:"password" redis:"password"`
+	LongUrl   string `json:"long_url" bson:"long_url"`
+	ShortUrl  string `json:"short_url" bson:"short_url"`
+	ShortCode string `json:"short_code" bson:"short_code"`
+	Password  string `json:"password" bson:"password"`
 }
 
 func (u *UrlSchema) Insert() error {
