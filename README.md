@@ -10,8 +10,7 @@ A simple and _blazingly fast_ URL shortner and resolver tool written in go that 
 - CLI
 
 #### Server
-It is a simple HTTP server written in GoFiber 
-framework.
+It is a simple HTTP server written in GoFiber framework.
 
 ##### How to Build
 1. Make sure your have `golang` and `make` installed on your machine
