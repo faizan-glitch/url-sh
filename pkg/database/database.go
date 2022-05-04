@@ -19,11 +19,11 @@ func Connect() {
 
 	credential := options.Credential{
 		AuthSource: "admin",
-		Username:   viper.GetString("DB_USER"),
-		Password:   viper.GetString("DB_PASS"),
+		Username:   viper.GetString("db.user"),
+		Password:   viper.GetString("db.pass"),
 	}
 
-	clientOpts := options.Client().ApplyURI(viper.GetString("DB_URL")).
+	clientOpts := options.Client().ApplyURI(viper.GetString("db.url")).
 		SetAuth(credential)
 
 	client, conErr := mongo.Connect(ctx, clientOpts)
@@ -32,7 +32,7 @@ func Connect() {
 		panic(conErr)
 	}
 
-	Db = client.Database(viper.GetString("DB_NAME"))
+	Db = client.Database(viper.GetString("db.name"))
 
 	Db.Collection("Urls").Indexes().CreateOne(context.TODO(), mongo.IndexModel{
 		Keys:    bson.D{{Key: "short_code", Value: 1}},

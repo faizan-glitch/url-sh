@@ -1,9 +1,11 @@
 package commands
 
 import (
+	"fmt"
 	"log"
 	"sync"
 
+	cb "github.com/atotto/clipboard"
 	"github.com/faizan-glitch/url-sh/pkg/models"
 	"github.com/spf13/cobra"
 	"golang.org/x/crypto/bcrypt"
@@ -33,7 +35,9 @@ var (
 				return
 			}
 
-			log.Println("Original url:", model.LongUrl)
+			fmt.Println("Copied to Clipboard:", model.LongUrl)
+
+			cb.WriteAll(model.LongUrl)
 		},
 	})
 

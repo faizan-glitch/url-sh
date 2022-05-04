@@ -25,9 +25,9 @@ func ShortCode(n uint8) string {
 }
 
 func ShortUrl(shortCode string) string {
-	return strings.Trim(viper.GetString("DOMAIN"), "/") + "/" + shortCode
+	return strings.Trim(viper.GetString("app.domain"), "/") + "/" + shortCode
 }
 
 func HashPassword(password string) ([]byte, error) {
-	return bcrypt.GenerateFromPassword([]byte(password), viper.GetInt("BCRYPT_ROUNDS"))
+	return bcrypt.GenerateFromPassword([]byte(password), viper.GetInt("bcrypt.rounds"))
 }

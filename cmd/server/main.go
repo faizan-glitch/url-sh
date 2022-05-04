@@ -32,5 +32,5 @@ func main() {
 
 	routes.RegisterUrlRoutes(app)
 
-	log.Fatal(app.Listen(viper.GetString("PORT")))
+	log.Fatal(app.Listen(viper.GetString("app.port")))
 }
