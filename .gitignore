@@ -23,5 +23,3 @@ tmp/
 env
 
 .DS_Store
-
-config.yaml
