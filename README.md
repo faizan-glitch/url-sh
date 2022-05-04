@@ -25,5 +25,5 @@ It is a simple CLI app in case you wish to use this project in a terminal and no
 2. Navigate to this project in terminal.
 3. Change `config.yaml` file to suit your environment.
 4. Type the command `make setup`.
-5. Type the command `./scripts/cli/install-linux.sh`.s
+5. Type the command `./scripts/cli/install-linux.sh`.
 6. Run `url-sh` in terminal to test if app is running properly.
